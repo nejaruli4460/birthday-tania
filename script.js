@@ -25,7 +25,7 @@ document.querySelector("input").addEventListener('click',()=>{
         }
         else{
             left--;
-            alert("you dont know about me"+left);
+            alert("chances left "+left);
         }
         
     }
