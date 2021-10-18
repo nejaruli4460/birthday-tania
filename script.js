@@ -7,10 +7,10 @@ img.addEventListener('click',()=>{
         audio.play();
         audio.loop=true;
 })
-let count=0;
+let left=2;
 document.querySelector("input").addEventListener('click',()=>{
     console.log(document.querySelector("#opt").value)
-    if(document.querySelector("#opt").value=='Brother'&&count==0){
+    if(document.querySelector("#opt").value=='Brother'&&left>0){
         document.querySelector(".container").style.display="block";
         document.querySelector(".click").style.display="block";
         img.style.display="block";
@@ -18,8 +18,15 @@ document.querySelector("input").addEventListener('click',()=>{
     
     }
     else{
-        count++;
-        alert("you dont know about me and you are trying time :"+count);
         audio.pause();
+        if (left==0){
+            alert("you have no chance please dont call me bhaiya !!!!");
+            document.querySelector("body").style.display="none";
+        }
+        else{
+            left--;
+            alert("you dont know about me"+left);
+        }
+        
     }
 });
