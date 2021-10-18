@@ -5,6 +5,7 @@ img.addEventListener('click',()=>{
     img.src="Birthday_cake.jpg";
     document.querySelector('.click').style.display="none";
         audio.play();
+        audio.loop=true;
 })
 let count=0;
 document.querySelector("input").addEventListener('click',()=>{
